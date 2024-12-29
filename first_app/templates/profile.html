@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{%load crispy_forms_tags%}
+{%block content%}
+    <div class="row mt-5 p-5">
+        <div class="col-12 shadow border p-3 mb-5 bg-body-gray rounded">
+            <h1>My Profiles</h1>
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                  <p class="card-text">Passionate about technology, teaching, and empowering others through innovation Skilled in MERN Stack, Python Django, and competitive programming. Dedicated to continuous learning, with a focus on creating impactful solutions.Aspiring to inspire and guide the next generation of tech enthusiasts.Always ready to collaborate on exciting projects and share knowledge.</p>
+                  <p class="card-text">Username: {{user.username}}</p>
+                  <a href="{% url 'change_password' %}">Change password</a>
+                  <br>
+                  <a href="{% url 'pass_change_without_old' %}">Change password without old</a>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+{%endblock%}
